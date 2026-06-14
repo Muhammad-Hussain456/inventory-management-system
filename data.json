@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Coffee Beans",
+    "sku": "COF-001",
+    "quantity": 53,
+    "minQuantity": 10,
+    "price": 15.99,
+    "category": "Beverages",
+    "createdAt": "2026-06-14T10:16:32.729Z",
+    "updatedAt": "2026-06-14T11:25:30.925Z"
+  },
+  {
+    "id": 2,
+    "name": "Paper Cups",
+    "sku": "CUP-001",
+    "quantity": 200,
+    "minQuantity": 50,
+    "price": 0.25,
+    "category": "Supplies",
+    "createdAt": "2026-06-14T10:16:32.729Z",
+    "updatedAt": "2026-06-14T10:33:07.209Z"
+  },
+  {
+    "id": 3,
+    "name": "Laptop Stand",
+    "sku": "STD-001",
+    "quantity": 10,
+    "minQuantity": 10,
+    "price": 49.99,
+    "category": "Electronics",
+    "createdAt": "2026-06-14T10:16:32.729Z",
+    "updatedAt": "2026-06-14T11:24:32.533Z"
+  },
+  {
+    "id": 4,
+    "name": "Cherry",
+    "sku": "Skd-11",
+    "quantity": 0,
+    "minQuantity": 10,
+    "price": "2000",
+    "category": "Fruits",
+    "createdAt": "2026-06-14T10:21:25.558Z",
+    "updatedAt": "2026-06-14T10:46:37.438Z"
+  },
+  {
+    "id": 5,
+    "name": "Mango",
+    "sku": "Mn-011",
+    "quantity": 0,
+    "minQuantity": 10,
+    "price": "300",
+    "category": "Fruits",
+    "createdAt": "2026-06-14T10:26:37.403Z",
+    "updatedAt": "2026-06-14T11:41:17.933Z"
+  }
+]

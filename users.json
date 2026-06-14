@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "name": "Admin",
+    "email": "admin@stockflow.com",
+    "password": "admin123",
+    "role": "admin"
+  }
+]
