@@ -182,3 +182,10 @@ export function adjustStock(id: number, type: string, qty: number) {
   product.updatedAt = new Date().toISOString()
   return product
 }
+
+export function deleteProduct(id: number): boolean {
+  const index = products.findIndex(p => p.id === id)
+  if (index === -1) return false
+  products.splice(index, 1)
+  return true
+}

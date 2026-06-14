@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
-import { getProducts, addProduct, adjustStock } from "@/lib/data"
+import { getProducts, addProduct, adjustStock, deleteProduct } from "@/lib/data"
 
 export async function GET() {
   const products = getProducts()
@@ -9,7 +9,7 @@ export async function GET() {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    
+
     // Handle stock adjustment
     if (body.action === 'adjust') {
       const result = adjustStock(body.id, body.type, body.qty || 1)
@@ -18,11 +18,16 @@ export async function POST(request: NextRequest) {
       }
       return NextResponse.json(result)
     }
-    
+    if (body.action === 'delete') {
+      const success = deleteProduct(body.id)
+      if (!success) return NextResponse.json({ error: "Not found" }, { status: 404 })
+      return NextResponse.json({ success: true })
+    }
     // Handle adding product
     const product = addProduct(body)
     return NextResponse.json(product, { status: 201 })
   } catch (error) {
     return NextResponse.json({ error: "Something went wrong" }, { status: 500 })
   }
+
 }
